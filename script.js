@@ -14,3 +14,16 @@ navLinks.addEventListener("click", (e) => {
 
     menuButtonIcon.setAttribute("class", "ri-menu-line");
 });
+
+document.getElementById("input-file").addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const img = document.getElementById("uploaded-image");
+            img.src = e.target.result;
+            document.getElementById("uploaded-image-container").style.display = "block";
+        };
+        reader.readAsDataURL(file);
+    }
+});

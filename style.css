@@ -83,8 +83,32 @@ nav {
     color: #fff;
 }
 
+/*
 .nav__btn {
     display: none;
+}
+*/
+
+label {
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+.uploaded-image-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+uploaded-image-container img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* TODO: Change so phone view is in block */
@@ -140,12 +164,9 @@ nav {
         border-color: #fff;
     }
 
-    .nav__btn {
+    label {
         display: flex;
         flex: 1;
-    }
-
-    .nav__btn .btn{
         padding: 0.75rem;
         outline: none;
         border: none;
@@ -153,7 +174,6 @@ nav {
         font-weight: 600;
         white-space: nowrap;
         color: #fff;
-        /* background-color: #c45237; */
         background-color: #d1735d; /* Maybe change to darker color */
         border-radius: 5rem;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -161,9 +181,8 @@ nav {
         cursor: pointer;
     }
 
-    .nav__btn .btn:hover {
+    label:hover {
         color: #fff;
-        /* background-color: #ac351a; */
         box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
     }
 }
