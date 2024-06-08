@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(25, 26, 28);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+}
+
+.nav__header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c45237;
+    color: #fff;
+}
+
+.nav__logo a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav__logo a span {
+    padding: 0 0.5rem;
+}
+
+.nav__menu__btn {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav__links {
+    position: absolute;
+    top: 59px;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #c45237;
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.nav__links.open {
+    transform: translateY(0);
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav__links a:hover {
+    /* color: #000; */
+    color: #fff;
+}
+
+.nav__btn {
+    display: none;
+}
+
+/* TODO: Change so phone view is in block */
+@media (width > 768px) {
+    nav {
+        position: absolute;
+        padding-block: 2rem;
+        padding-inline: 1rem;
+        max-width: 100%;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        background-color: #c45237;
+    }
+
+    .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__logo a {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .nav__logo a span {
+        padding: 6px 9px;
+        color: #fff;
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none;
+    }
+
+    .nav__links a {
+        padding-block: 5px;
+        color: #fff;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav__links a:hover {
+        border-color: #fff;
+    }
+
+    .nav__btn {
+        display: flex;
+        flex: 1;
+    }
+
+    .nav__btn .btn{
+        padding: 0.75rem;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        white-space: nowrap;
+        color: #fff;
+        /* background-color: #c45237; */
+        background-color: #d1735d; /* Maybe change to darker color */
+        border-radius: 5rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .nav__btn .btn:hover {
+        color: #fff;
+        /* background-color: #ac351a; */
+        box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+    }
+}
